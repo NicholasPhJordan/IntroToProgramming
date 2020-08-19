@@ -23,7 +23,7 @@ namespace HelloWorld
             int level = 1;
             bool ready = true;
             //Confirms character info
-            Console.WriteLine("Nice to meet you " + name + ". " + " The Mighty " + role + ". " + "You have " + health + " health and shall start at level " + level + ". Good Luck!");
+            Console.WriteLine("Nice to meet you " + name + ". " + "The Mighty " + role + ". " + "You shall start with " + health + " health at level " + level + ". Good Luck!");
 
             //i miss learning this
             //Always comment your code
