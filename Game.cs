@@ -8,37 +8,58 @@ namespace HelloWorld
     {
         public void Run()
         {
-                //Introduction -- Player chooses name and role
-            Console.WriteLine("Hello traveler! What is your name?");
-            string name = Console.ReadLine();
-            Console.WriteLine("Welcome " + name + "! " + "Please input a Role!");
-                //shows list of roles for player to choose from
-            List<string> roles = new List<string> { "Wizard", "Fighter", "Rogue" };
-            roles.ForEach(Console.WriteLine);  
-            string role = Console.ReadLine();
             //This variable is used to deciede health
             float health = 100.0f;
-            if (role == "Wizard")
-            {
-                health = 60.0f;
-            }
-            else if (role == "Fighter")
-            {
-                health = 100.0f;
-            } 
-            else if (role == "rogue")
-            {
-                health = 80.0f;
-            }
-                //This value is used to heal the player
+
+            //This value is used to heal the player
             float healthRegen = 20.0f;
-                //Character level Info
+
+            //Decides damage
+            int damage = 20;
+
+            //Character level Info
             bool MaxlevelReached = false;
             int Maxlevel = 100;
             int level = 1;
+
+            //stores players role
+            string role = "none";
             bool ready = true;
-                //Confirms character info
-            Console.WriteLine("Nice to meet you " + name + ". " + "The Mighty " + role + ". " + "You shall start with " + health + " health at level " + level + ". Good Luck!");
+
+            //Introduction -- Player chooses name and role
+            Console.WriteLine("Hello traveler! What is your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine("Welcome " + name + "! " + "Please select a Role!");
+
+            //shows list of roles for player to choose from and decides stats based on role
+            List<string> roles = new List<string> { "Press 1 for Wizard", "Press 2 for Knight", "Press 3 for Rogue" };
+            roles.ForEach(Console.WriteLine);
+            char input = Console.ReadKey().KeyChar;
+            if (input == '1')
+            {
+                role = "Wizard";
+                health = 60.0f;
+                damage = 20;
+            }
+            else if (input == '2')
+            {
+                role = "Knight";
+                health = 100.0f;
+                damage = 10;
+            }
+            else if (input == '3')
+            {
+                role = "Rogue";
+                health = 80.0f;
+                damage = 15;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input.");
+            }
+
+            //Confirms character info
+            Console.WriteLine("\nNice to meet you " + name + ". " + "The Mighty " + role + ". " + "You shall start with " + health + " health at level " + level + ". Good Luck!");
 
             //i miss learning this
             //Always comment your code
