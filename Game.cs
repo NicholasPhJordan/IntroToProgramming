@@ -55,7 +55,7 @@ namespace HelloWorld
             }
             else
             {
-                Console.WriteLine("Invalid input.");
+                Console.WriteLine("Invalid input. Default Settings used.");
             }
 
             //Confirms character info
