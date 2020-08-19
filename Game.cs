@@ -76,7 +76,7 @@ namespace HelloWorld
             Console.Clear();
 
             //First Interaction
-            Console.WriteLine("You begain your walk and not long later run into a little girl in a little red hood. " +
+            Console.WriteLine("You begin your walk and not long later run into a little girl in a little red hood. " +
                 "She looks up at you and smiles. Holding out her basket, she offers you an apple");
             Console.WriteLine("Press 1 to question her");
             Console.WriteLine("Press 2 to take an apple");
