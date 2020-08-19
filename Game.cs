@@ -8,18 +8,25 @@ namespace HelloWorld
     {
         public void Run()
         {
-            float health = 100.0f;
-            float healthRegen = 20;
+            //Introduction -- Player cooses name and role
+            Console.WriteLine("Hello traveler! What is your name?");
             string name = Console.ReadLine();
+            Console.WriteLine("Welcome " + name + "! " + "Please input a Role!");
+            string role = Console.ReadLine();
+            //This variable is used to store health
+            float health = 100.0f;
+            //This value is used to heal the player
+            float healthRegen = 20.0f;
+            //Character level Info
+            bool MaxlevelReached = false;
             int Maxlevel = 100;
-            int level = Maxlevel;
-            bool ready = false;
-            Console.WriteLine(health);
-            health = health + healthRegen;
-            Console.WriteLine("You just healed!! " + healthRegen);
-            Console.WriteLine(name + " just healed " + healthRegen);
+            int level = 1;
+            bool ready = true;
+            //Confirms character info
+            Console.WriteLine("Nice to meet you " + name + ". " + " The Mighty " + role + ". " + "You have " + health + " health and shall start at level " + level + ". Good Luck!");
 
             //i miss learning this
+            //Always comment your code
 
         }
     }
