@@ -80,7 +80,7 @@ namespace HelloWorld
             Console.WriteLine("Press 1 to question her");
             Console.WriteLine("Press 2 to take an apple");
             Console.WriteLine("Press 3 to attack");
-            char input = Console.ReadKey().KeyChar;
+            input = Console.ReadKey().KeyChar;
             if (input == '1')
             {
                 Console.WriteLine("\nYou ask the little girl why she is in these dangerous lands.");
@@ -88,14 +88,14 @@ namespace HelloWorld
                 Console.WriteLine("Press 1 to take apple");
                 Console.WriteLine("Press 2 to walk away");
                 Console.WriteLine("Press 3 to attack");
-                char input = Console.ReadKey().KeyChar;
+                input = Console.ReadKey().KeyChar;
                 if (input == '1')
                 {
                     Console.WriteLine("You take an apple from the little girl and eat it.");
                     Console.WriteLine("The little girl smiles with large fang like teeth. She pulls of the little red hood and turns into a large wolf!");
                     Console.WriteLine("Press 1 to run away");
                     Console.WriteLine("Press 2 to attack");
-                    char input = Console.ReadKey().KeyChar;
+                    input = Console.ReadKey().KeyChar;
                     if (input == '1')
                     {
                         Console.WriteLine("You manage to get away, but not before the wolf attacks you.");
@@ -196,7 +196,7 @@ namespace HelloWorld
                 Console.WriteLine("The little girl smiles with large fang like teeth. She pulls of the little red hood and turns into a large wolf!");
                 Console.WriteLine("Press 1 to run away");
                 Console.WriteLine("Press 2 to attack");
-                char input = Console.ReadKey().KeyChar;
+                input = Console.ReadKey().KeyChar;
                 if (input == '1')
                 {
                     Console.WriteLine("You manage to get away, but not before the wolf attacks you.");
