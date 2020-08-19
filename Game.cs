@@ -83,7 +83,205 @@ namespace HelloWorld
             char input = Console.ReadKey().KeyChar;
             if (input == '1')
             {
-                Console.WriteLine("You ask the little girl ");
+                Console.WriteLine("\nYou ask the little girl why she is in these dangerous lands.");
+                Console.WriteLine("She doesn't say anything but holds the basket up higher for you to take an apple.");
+                Console.WriteLine("Press 1 to take apple");
+                Console.WriteLine("Press 2 to walk away");
+                Console.WriteLine("Press 3 to attack");
+                char input = Console.ReadKey().KeyChar;
+                if (input == '1')
+                {
+                    Console.WriteLine("You take an apple from the little girl and eat it.");
+                    Console.WriteLine("The little girl smiles with large fang like teeth. She pulls of the little red hood and turns into a large wolf!");
+                    Console.WriteLine("Press 1 to run away");
+                    Console.WriteLine("Press 2 to attack");
+                    char input = Console.ReadKey().KeyChar;
+                    if (input == '1')
+                    {
+                        Console.WriteLine("You manage to get away, but not before the wolf attacks you.");
+                        health -= 20;
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (input == '2')
+                    {
+                        if (role == "Wizard")
+                        {
+                            Console.WriteLine("You cast a fireball at the wolf, frightening the wolf and causing the wolf to run away.");
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        else if (role == "Knight")
+                        {
+                            Console.WriteLine("You swipe skillfully with your sword at the wolf, fightening the wolf and causing the wolf to run away.");
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        else if (role == "Rogue")
+                        {
+                            Console.WriteLine("You quickly stab at the wolf, frightening the wolf and causing the wolf to run away.");
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        else if (role == "Adventurer")
+                        {
+                            Console.WriteLine("You attack the wolf, frightening the wolf and causing it to run away.");
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("You manage to get away, but not before the wolf attacks you.");
+                        health -= 20;
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                }
+                else if (input == '2')
+                {
+                    Console.WriteLine("You walk away from the little girl and continue your adventure");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else if (input == '3')
+                {
+                    if (role == "Wizard")
+                    {
+                        Console.WriteLine("You cast a fireball at the wolf, frightening the wolf and causing the wolf to run away.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (role == "Knight")
+                    {
+                        Console.WriteLine("You swipe skillfully with your sword at the wolf, fightening the wolf and causing the wolf to run away.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (role == "Rogue")
+                    {
+                        Console.WriteLine("You quickly stab at the wolf, frightening the wolf and causing the wolf to run away.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (role == "Adventurer")
+                    {
+                        Console.WriteLine("You attack the wolf, frightening the wolf and causing it to run away.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("You walk away from the little girl and continue your adventure");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+            else if (input == '2')
+            {
+                Console.WriteLine("You take an apple from the little girl and eat it.");
+                Console.WriteLine("The little girl smiles with large fang like teeth. She pulls of the little red hood and turns into a large wolf!");
+                Console.WriteLine("Press 1 to run away");
+                Console.WriteLine("Press 2 to attack");
+                char input = Console.ReadKey().KeyChar;
+                if (input == '1')
+                {
+                    Console.WriteLine("You manage to get away, but not before the wolf attacks you.");
+                    health -= 20;
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else if (input == '2')
+                {
+                    if (role == "Wizard")
+                    {
+                        Console.WriteLine("You cast a fireball at the wolf, frightening the wolf and causing the wolf to run away.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (role == "Knight")
+                    {
+                        Console.WriteLine("You swipe skillfully with your sword at the wolf, fightening the wolf and causing the wolf to run away.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (role == "Rogue")
+                    {
+                        Console.WriteLine("You quickly stab at the wolf, frightening the wolf and causing the wolf to run away.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (role == "Adventurer")
+                    {
+                        Console.WriteLine("You attack the wolf, frightening the wolf and causing it to run away.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("You manage to get away, but not before the wolf attacks you.");
+                    health -= 20;
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+            else if (input == 3)
+            {
+                if (role == "Wizard")
+                {
+                    Console.WriteLine("You cast a fireball at the wolf, frightening the wolf and causing the wolf to run away.");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else if (role == "Knight")
+                {
+                    Console.WriteLine("You swipe skillfully with your sword at the wolf, fightening the wolf and causing the wolf to run away.");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else if (role == "Rogue")
+                {
+                    Console.WriteLine("You quickly stab at the wolf, frightening the wolf and causing the wolf to run away.");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else if (role == "Adventurer")
+                {
+                    Console.WriteLine("You attack the wolf, frightening the wolf and causing it to run away.");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+            else
+            {
+                Console.WriteLine("You walk away from the little girl and continue your adventure");
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
+                Console.Clear();
             }
 
             //i miss learning this
