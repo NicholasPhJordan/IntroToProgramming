@@ -15,7 +15,7 @@ namespace HelloWorld
             float healthRegen = 20.0f;
 
             //Decides damage
-            int damage = 20;
+            float damage = 20.0f;
 
             //Character level Info
             bool MaxlevelReached = false;
@@ -39,19 +39,19 @@ namespace HelloWorld
             {
                 role = "Wizard";
                 health = 60.0f;
-                damage = 20;
+                damage = 20.0f;
             }
             else if (input == '2')
             {
                 role = "Knight";
                 health = 100.0f;
-                damage = 10;
+                damage = 10.0f;
             }
             else if (input == '3')
             {
                 role = "Rogue";
                 health = 80.0f;
-                damage = 15;
+                damage = 15.0f;
             }
             else
             {
