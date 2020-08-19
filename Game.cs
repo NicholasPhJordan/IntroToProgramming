@@ -268,7 +268,7 @@ namespace HelloWorld
                     Console.Clear();
                 }
             }
-            else if (input == 3)
+            else if (input == '3')
             {
                 if (role == "Wizard")
                 {
