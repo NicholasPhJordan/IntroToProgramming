@@ -9,6 +9,9 @@ namespace HelloWorld
     {
         public void Run()
         {
+            //Decides the color of the text
+            Console.ForegroundColor = ConsoleColor.Green;
+            
             //This variable is used to deciede health
             float health = 100.0f;
 
@@ -69,7 +72,16 @@ namespace HelloWorld
             
 
             //Confirms character info
-            Console.WriteLine("\nNice to meet you " + name + ". " + "The Mighty " + role + ". " + "You shall start with " + health + " health at level " + level + "." );
+            Console.WriteLine("\nNice to meet you " + name + ". " + "The Mighty " + role + ".");
+            Console.WriteLine("This is you...");
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Role: " + role);
+            Console.WriteLine("Level: " + level);
+            Console.WriteLine("Health: " + health);
+            Console.WriteLine("Damage: " + damage);
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey();
+            Console.Clear();
 
             //Intro
             Console.WriteLine("You are a mighty adventurer in unknown lands where monsters, theives, and many other dangers live. " +
@@ -119,6 +131,7 @@ namespace HelloWorld
                                     Console.WriteLine("Press any key to continue.");
                                     Console.ReadKey();
                                     Console.Clear();
+                                    break;
                                 }
                                 else if (input == '2')
                                 {
@@ -129,6 +142,7 @@ namespace HelloWorld
                                         Console.WriteLine("Press any key to continue.");
                                         Console.ReadKey();
                                         Console.Clear();
+                                        break;
                                     }
                                     else if (role == "Knight")
                                     {
@@ -137,6 +151,7 @@ namespace HelloWorld
                                         Console.WriteLine("Press any key to continue.");
                                         Console.ReadKey();
                                         Console.Clear();
+                                        break;
                                     }
                                     else if (role == "Rogue")
                                     {
@@ -145,11 +160,13 @@ namespace HelloWorld
                                         Console.WriteLine("Press any key to continue.");
                                         Console.ReadKey();
                                         Console.Clear();
+                                        break;
                                     }
                                 }
                                 else
                                 {
                                     Console.WriteLine("\nInvalid Input");
+                                    continue;
                                 }
                             }
                         }
@@ -160,6 +177,7 @@ namespace HelloWorld
                             Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             Console.Clear();
+                            break;
                         }
                         else if (input == '3')
                         {
@@ -170,6 +188,7 @@ namespace HelloWorld
                                 Console.WriteLine("Press any key to continue.");
                                 Console.ReadKey();
                                 Console.Clear();
+                                break;
                             }
                             else if (role == "Knight")
                             {
@@ -178,6 +197,7 @@ namespace HelloWorld
                                 Console.WriteLine("Press any key to continue.");
                                 Console.ReadKey();
                                 Console.Clear();
+                                break;
                             }
                             else if (role == "Rogue")
                             {
@@ -186,11 +206,13 @@ namespace HelloWorld
                                 Console.WriteLine("Press any key to continue.");
                                 Console.ReadKey();
                                 Console.Clear();
+                                break;
                             }
                         }
                         else
                         {
                             Console.WriteLine("\nInvalid Input");
+                            continue;
                         }
                     } 
                 }
@@ -212,6 +234,7 @@ namespace HelloWorld
                             Console.WriteLine("Press any key to continue.");
                             Console.ReadKey();
                             Console.Clear();
+                            break;
                         }
                         else if (input == '2')
                         {
@@ -222,6 +245,7 @@ namespace HelloWorld
                                 Console.WriteLine("Press any key to continue.");
                                 Console.ReadKey();
                                 Console.Clear();
+                                break;
                             }
                             else if (role == "Knight")
                             {
@@ -230,6 +254,7 @@ namespace HelloWorld
                                 Console.WriteLine("Press any key to continue.");
                                 Console.ReadKey();
                                 Console.Clear();
+                                break;
                             }
                             else if (role == "Rogue")
                             {
@@ -238,11 +263,13 @@ namespace HelloWorld
                                 Console.WriteLine("Press any key to continue.");
                                 Console.ReadKey();
                                 Console.Clear();
+                                break;
                             }
                         }
                         else
                         {
                             Console.WriteLine("\nInvalid Input");
+                            continue;
                         }
                     }
                 }
@@ -255,6 +282,7 @@ namespace HelloWorld
                         Console.WriteLine("Press any key to continue.");
                         Console.ReadKey();
                         Console.Clear();
+                        break;
                     }
                     else if (role == "Knight")
                     {
@@ -263,6 +291,7 @@ namespace HelloWorld
                         Console.WriteLine("Press any key to continue.");
                         Console.ReadKey();
                         Console.Clear();
+                        break;
                     }
                     else if (role == "Rogue")
                     {
@@ -271,11 +300,43 @@ namespace HelloWorld
                         Console.WriteLine("Press any key to continue.");
                         Console.ReadKey();
                         Console.Clear();
+                        break;
                     }
                 }
                 else
                 {
                     Console.WriteLine("\nInvalid Input");
+                    continue;
+                }
+            }
+
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey();
+            Console.Clear();
+
+            //Path Diverges
+            Console.WriteLine("You continue walking down the path when you come to a fork in the road.");
+            Console.WriteLine("Press 1 to go left towads a tall grassy meadow.");
+            Console.WriteLine("Press 2 to go right towards a dark woods.");
+            while (input != '1' || input != '2')
+            {
+                if (input == '1')
+                {
+                    Console.WriteLine("\nYou decide to walk towards the Tall Grassy Meadow and continue your adventure.");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else if (input == '2')
+                {
+                    Console.WriteLine("\nYou decide to walk towards the Dark Woods and continue your adventure");
+                    Console.WriteLine("Press any key to continue.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input");
                 }
             }
 
