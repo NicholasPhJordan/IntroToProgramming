@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 
 namespace HelloWorld
@@ -9,14 +10,20 @@ namespace HelloWorld
     {
         public void Run()
         {
-            bool GameOver = false;
-            while (GameOver == false)
+            bool gameOver = false;
+            while (gameOver == false)
             {
                 //Decides the color of the text
                 Console.ForegroundColor = ConsoleColor.Green;
 
-                //This variable is used to deciede health
+                //This variable is used to deciede health and death 
                 float health = 100.0f;
+                if (health <= 0.0f)
+                {
+                    gameOver = true;
+                    Console.WriteLine("You Died");
+                    Console.WriteLine("G A M E  O V E R");
+                }
 
                 //This value is used to heal the player
                 float healthRegen = 20.0f;
@@ -31,6 +38,9 @@ namespace HelloWorld
 
                 //stores players role
                 string role = "Adventurer";
+
+                //decides the area the player is in
+                string area = " ";
 
                 //Introduction -- Player chooses name and role
                 Console.WriteLine("Hello traveler! What is your name?");
@@ -104,7 +114,7 @@ namespace HelloWorld
                 Console.Clear();
 
                 //First Interaction
-                Console.WriteLine("You begin your walk and not long later run into a little girl in a little red hood. " +
+                Console.WriteLine("You begin your walk and run into a little girl in a little red hood. " +
                     "She looks up at you and smiles. Holding out her basket, she offers you an apple");
                 Console.WriteLine("Press 1 to question her");
                 Console.WriteLine("Press 2 to take an apple");
@@ -218,7 +228,7 @@ namespace HelloWorld
                     {
                         Console.WriteLine("\nYou manage to get away, but not before the wolf attacks you.");
                         Console.WriteLine("Loose 20 Health");
-                        health -= 20;
+                        health -= 20.0f;
                         Console.WriteLine("You continue your adventure.");
                         Console.WriteLine("Press any key to continue.");
                         Console.ReadKey();
@@ -290,12 +300,13 @@ namespace HelloWorld
 
                 //Path Diverges
                 Console.WriteLine("You continue walking down the path when you come to a fork in the road.");
-                Console.WriteLine("Press 1 to go left towads a tall grassy meadow.");
-                Console.WriteLine("Press 2 to go right towards a dark woods.");
+                Console.WriteLine("Press 1 to go left towads a Tall Grassy Meadow.");
+                Console.WriteLine("Press 2 to go right towards a Dark Woods.");
                 input = Console.ReadKey().KeyChar;
                 if (input == '1')
                 {
                     Console.WriteLine("\nYou decide to walk towards the Tall Grassy Meadow and continue your adventure.");
+                    area = "Tall Grassy Meadow";
                     Console.WriteLine("Press any key to continue.");
                     Console.ReadKey();
                     Console.Clear();
@@ -303,6 +314,7 @@ namespace HelloWorld
                 else if (input == '2')
                 {
                     Console.WriteLine("\nYou decide to walk towards the Dark Woods and continue your adventure");
+                    area = "Dark Woods";
                     Console.WriteLine("Press any key to continue.");
                     Console.ReadKey();
                     Console.Clear();
@@ -312,6 +324,81 @@ namespace HelloWorld
                     Console.WriteLine("Invalid Input");
                 }
 
+                //code for Dark Woods area
+                while (area == "Dark Woods")
+                {
+                    Console.WriteLine("You walk along the dark covered path and see an old man sitting on a fallen tree off the side of the road.");
+                    Console.WriteLine("He looks up at you and asks you to help him up.");
+                    Console.WriteLine("Press 1 to help him up");
+                    Console.WriteLine("Press 2 to ignore and walk away");
+                    Console.WriteLine("Press 3 to attack");
+                    input = Console.ReadKey().KeyChar;
+                    if (input == '1')
+                    {
+                        Console.WriteLine("\nYou help up the old man and see his faded eyes realizing he is blind.");
+                        Console.WriteLine("He thanks you for your help and waves his hand over your weapon. " +
+                            "He then pats you on the sholder, wishes you good luck, and walks down the path.");
+                        Console.WriteLine("+5 bonus to Damage");
+                        damage = damage += 5.0f;
+                        Console.WriteLine("You continue your adventure.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (input == '2')
+                    {
+                        Console.WriteLine("\nYou ignore the old man and continue walking down the trail.");
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                    else if (input == '3')
+                    {
+                        if (role == "Wizard")
+                        {
+                            Console.WriteLine("\nYou go to cast a fireball at the old man but nothing happens.");
+                            Console.WriteLine("The old man looks at you with faded eyes and smiles. " +
+                                "He waves his hand and you feel a burning sensation from your staff.");
+                            Console.WriteLine("Loose 20 Health");
+                            health -= 20.0f;
+                            Console.WriteLine("The old man vanishes in a piller of smoke.");
+                            Console.WriteLine("You continue your adventure.");
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        else if (role == "Knight")
+                        {
+                            Console.WriteLine("\nYou charge at the old man with your sword when he vanishes in a piller of smoke.");
+                            Console.WriteLine("Reappearing behind you; he looks at you with faded eyes, smiles, and waves his hand. " +
+                                "You feel a burning sensation from your sword.");
+                            Console.WriteLine("Loose 20 Health");
+                            health -= 20.0f;
+                            Console.WriteLine("The old man vanishes in a piller of smoke.");
+                            Console.WriteLine("You continue your adventure.");
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        else if (role == "Rogue") 
+                        {
+                            Console.WriteLine("\nYou dash at the old man with daggers in each hand, but he vanishes in a piller of smoke.");
+                            Console.WriteLine("Reappearing behind you; he looks at you with faded eyes, smiles, and waves his hand. " +
+                                "You feel a burning sensation from your daggers.");
+                            Console.WriteLine("Loose 20 Health");
+                            health -= 20.0f;
+                            Console.WriteLine("The old man vanishes in a piller of smoke.");
+                            Console.WriteLine("You continue your adventure.");
+                            Console.WriteLine("Press any key to continue.");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nInvalid Input");
+                    }
+                }
 
                 //i miss learning this
                 //Always comment your code
